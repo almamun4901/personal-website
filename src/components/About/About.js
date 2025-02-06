@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className='about center'>
       {photo && (
-       <img height="200px" alt="Avatar placeholder" src={photo} />
+       <img className ="rounded-full h-40 w-30" height="200px" alt="Avatar placeholder" src={photo} />
       )}
       {name && (
         <h1>
@@ -23,7 +23,7 @@ const About = () => {
       <div className='about__contact center'>
         {resume && (
           <a href={resume}>
-            <span type='button' className='btn btn--outline'>
+            <span type='button' className='btn btn--outline rounded-full'>
               Resume
             </span>
           </a>
