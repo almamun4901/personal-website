@@ -1,5 +1,6 @@
 import aboutpic from "./components/Access/myimage.jpg"
 
+
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://morganbb104.github.io/HW_20_Portfolio_withReact/',
@@ -68,24 +69,26 @@ const projects = [
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
-  'JavaScript',
   'Python',
-  'Express',
+  'Java',
+  'C',
+  'C#',
   'MySQL',
-  'MongoDB',
   'React',
-  'Redux',
-  'SASS',
+  'Tailwind',
+  'Unity',
+  '3D Modeling',
   'Material UI',
   'Git',
-  'MERN',
-  'Java 8',
-  'Java Spring Boot',
-  'Microservices',
-  'Docker',
-  'Heroku'
+  'Java',
+  'Microservices'
+]
+
+const gallery = [
+  `${process.env.PUBLIC_URL}/images/myimage.jpg`,
+  `${process.env.PUBLIC_URL}/images/image.JPG`,
+  "https://images.pexels.com/photos/29847092/pexels-photo-29847092/free-photo-of-icelandic-landscape-at-sunset-with-jimny.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/30332774/pexels-photo-30332774/free-photo-of-serene-woman-reading-in-a-spring-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 ]
 
 const contact = {
@@ -93,4 +96,4 @@ const contact = {
   email: 'md.al.mamun.26@dartmouth.edu',
 }
 
-export { header, about, projects, skills, contact }
+export { header, about, projects, skills, contact, gallery }

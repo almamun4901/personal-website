@@ -5,7 +5,16 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio: {
+        '5/6': '5 / 6',
+        '2/3': '2 / 3',
+        '3/4': '3 / 4'
+      },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))'
+      }
+    },
   },
   plugins: [],
 }

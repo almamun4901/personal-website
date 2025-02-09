@@ -12,5 +12,6 @@
 }
 
 .skills__list-item {
+  text-transform: none !important;
   margin: 0.5em;
 }

@@ -2,7 +2,7 @@
   "name": "chengfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://morganbb104.github.io/HW_20_Portfolio_withReact/",
+  "homepage": "Home",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
