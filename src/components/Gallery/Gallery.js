@@ -44,20 +44,32 @@ const Gallery = () => {
       ) : (
         <div className="max-w-6xl mx-auto animate-fade-in-view">
           <ul id="gallery" className="grid grid-cols-2 gap-5 lg:grid-cols-5">
-            {gallery.map((img) => (
-              <li key={img}>
+            {gallery.map((item) => (
+              <li key={item.img}>
                 <div 
                   role="button"
                   tabIndex="0"
-                  onClick={() => openGallery(gallery.indexOf(img))}
-                  onKeyDown={(e) => e.key === 'Enter' && openGallery(gallery.indexOf(img))}
+                  onClick={() => openGallery(gallery.findIndex(i => i.img === item.img))}
+                  onKeyDown={(e) => e.key === 'Enter' && openGallery(gallery.findIndex(i => i.img === item.img))}
                   className="cursor-zoom-in"
                 >
                   <img
-                    src={img}
+                    src={item.img}
                     className="object-cover w-full h-auto bg-gray-200 rounded aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
-                    alt="Gallery item"
+                    alt={`${item.city}, ${item.country}`}
                   />
+                  <div className="mt-2 text-center">
+                    {item.city && (
+                      <p className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {item.city}
+                      </p>
+                    )}
+                    {item.country && (
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                        {item.country}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </li>
             ))}
@@ -91,8 +103,8 @@ const Gallery = () => {
             
             <img
               className="object-contain object-center w-full h-full select-none cursor-zoom-out"
-              src={gallery[activeIndex]}
-              alt=""
+              src={gallery[activeIndex].img}
+              alt={`${gallery[activeIndex].city}, ${gallery[activeIndex].country}`}
             />
             
             <button

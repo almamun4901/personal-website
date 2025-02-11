@@ -13,7 +13,10 @@ module.exports = {
       },
       gridTemplateColumns: {
         '16': 'repeat(16, minmax(0, 1fr))'
-      }
+      },
+      fontFamily:{
+        monument: ['Monument Grotesk Mono', 'monospace'],
+      },
     },
   },
   plugins: [],
