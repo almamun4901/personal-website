@@ -14,7 +14,7 @@ const Navbar = () => {
   const toggleNavList = () => setShowNavList(!showNavList)
 
   return (
-    <nav className='center nav'>
+    <nav className='center nav font-monument'>
       <ul
         style={{ display: showNavList ? 'flex' : null }}
         className='nav__list'
