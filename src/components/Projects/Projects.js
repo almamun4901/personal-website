@@ -1,22 +1,74 @@
-import uniqid from 'uniqid'
-import { projects } from '../../portfolio'
-import ProjectContainer from '../ProjectContainer/ProjectContainer'
-import './Projects.css'
+import React from 'react'
 
 const Projects = () => {
-  if (!projects.length) return null
+  const professionalWork = [
+    {
+      title: "Branding & Creative",
+      description: "Put the spotlight on your brand...",
+      tags: ["Brand Strategy", "Brand Identity", "Graphic Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/boys.jpeg`
+    },
+    {
+      title: "Web Development", 
+      description: "Create experiences that immerse consumers...",
+      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/girl.jpeg`
+    }
+  ]
+
+  if (!professionalWork.length) return null
 
   return (
-    <section id='projects' className='section projects'>
-      <h2 className='section__title'>Projects</h2>
+    <section id='work' className='py-24'>
+      <div className='w-full px-4 mx-auto max-w-7xl'>
+        <div className='w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center mb-16'>
+          <h2 className='mb-6 text-4xl font-extrabold leading-none tracking-normal md:text-6xl md:tracking-tight'>
+            <span className='block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500'>
+              Professional Work
+            </span>
+          </h2>
+        </div>
 
-      <div className='projects__grid'>
-        {projects.map((project) => (
-          <ProjectContainer key={uniqid()} project={project} />
-        ))}
+        <div className='space-y-24'>
+          {professionalWork.map((section) => (
+            <div 
+              key={section.title}
+              className='flex flex-col items-center gap-8 md:gap-12 md:flex-row group'
+            >
+              {/* Text Content - Left Side */}
+              <div className='md:w-1/2'>
+                <h3 className='text-3xl font-bold'>{section.title}</h3>
+                <p className='mt-4 text-gray-600'>{section.description}</p>
+                
+                <div className='flex flex-wrap gap-2 mt-6'>
+                  {section.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className='px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-800'
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Image - Right Side */}
+              <div className='md:w-1/2'>
+                <div className='relative overflow-hidden rounded-xl aspect-[16/9]'>
+                  <img
+                    src={section.image}
+                    alt={`${section.title} example`}
+                    className='object-cover w-full h-full'
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
 }
 
 export default Projects
+

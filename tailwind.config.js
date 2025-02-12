@@ -11,11 +11,20 @@ module.exports = {
         '2/3': '2 / 3',
         '3/4': '3 / 4'
       },
+      animation: {
+        marquee: 'marquee 35s linear infinite',
+      },
       gridTemplateColumns: {
         '16': 'repeat(16, minmax(0, 1fr))'
       },
       fontFamily:{
         monument: ['Monument Grotesk Mono', 'monospace'],
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
       },
     },
   },

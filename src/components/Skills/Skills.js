@@ -1,22 +1,39 @@
-import uniqid from 'uniqid'
-import { skills } from '../../portfolio'
-import './Skills.css'
+import React from "react";
+import './Skills.css' // Create this file
 
 const Skills = () => {
-  if (!skills.length) return null
+  // Local skills array with unique entries
+  const localSkills = [
+    'Python',
+    'Java',
+    'C',
+    'C#',
+    'MySQL',
+    'React',
+    'Tailwind',
+    'Unity',
+    '3D Modeling',
+    'Material UI',
+    'Git',
+    'Microservices'
+  ]
 
   return (
-    <section className='section skills' id='skills'>
-      <h2 className='section__title'>Skills</h2>
-      <ul className='skills__list'>
-        {skills.map((skill) => (
-          <li key={uniqid()} className='skills__list-item btn btn-outline-light btn-lg rounded-pill shadow-sm hover:shadow-lg transition-all duration-300'>
-            {skill}
-          </li>
+    <div className="w-full overflow-hidden bg-gray-100 py-8">
+      <div className="flex w-[200%] animate-marquee">
+        {[...localSkills, ...localSkills].map((skill, index) => (
+          <div
+            key={`${skill}-${index % localSkills.length}`}
+            className="w-1/2 flex justify-between items-center"
+          >
+            <span className="mx-8 text-2xl font-medium text-gray-600 whitespace-nowrap">
+              {skill}
+            </span>
+          </div>
         ))}
-      </ul>
-    </section>
+      </div>
+    </div>
   )
 }
 
-export default Skills
+export default Skills;

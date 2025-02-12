@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import { ThemeContext } from './contexts/theme'
+import React from 'react'
 import Header from './components/Header/Header'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
@@ -10,21 +9,17 @@ import Footer from './components/Footer/Footer'
 import Gallery from './components/Gallery/Gallery'
 import './App.css'
 
-const App = () => {
-  const [{ themeName }] = useContext(ThemeContext)
-
+function App() {
   return (
-    <div id='top' className={`${themeName} app`}>
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
-
-      <main className='font-monument'>
+      <main className="mx-auto max-w-[100vw]">
         <About />
         <Projects />
         <Skills />
         <Gallery />
         <Contact />
       </main>
-
       <ScrollToTop />
       <Footer />
     </div>
