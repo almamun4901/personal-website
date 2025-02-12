@@ -9,3 +9,25 @@
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-gap: 2em;
 }
+
+/* For smooth underline animation */
+.text-3xl.font-bold {
+  position: relative;
+  display: inline-block;
+}
+
+.text-3xl.font-bold::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #4ade80, #a855f7);
+  transition: width 0.3s ease-out;
+}
+
+.group:hover .text-3xl.font-bold::after {
+  width: 100%;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

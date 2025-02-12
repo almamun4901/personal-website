@@ -19,7 +19,7 @@ const Skills = () => {
   ]
 
   return (
-    <div className="w-full overflow-hidden bg-gray-100 py-8">
+    <div className="w-full overflow-hidden bg-white-100 py-8">
       <div className="flex w-[200%] animate-marquee">
         {[...localSkills, ...localSkills].map((skill, index) => (
           <div

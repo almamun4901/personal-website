@@ -37,7 +37,10 @@ const Projects = () => {
             >
               {/* Text Content - Left Side */}
               <div className='md:w-1/2'>
-                <h3 className='text-3xl font-bold'>{section.title}</h3>
+                <h3 className='text-3xl font-bold relative inline-block'>
+                  {section.title}
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-green-400 to-purple-500 transition-all duration-300 group-hover:w-full" />
+                </h3>
                 <p className='mt-4 text-gray-600'>{section.description}</p>
                 
                 <div className='flex flex-wrap gap-2 mt-6'>
@@ -54,12 +57,13 @@ const Projects = () => {
 
               {/* Image - Right Side */}
               <div className='md:w-1/2'>
-                <div className='relative overflow-hidden rounded-xl aspect-[16/9]'>
+                <div className='relative overflow-hidden aspect-[16/9] group'>
                   <img
                     src={section.image}
                     alt={`${section.title} example`}
-                    className='object-cover w-full h-full'
+                    className='object-cover w-full h-full transition-transform duration-300 group-hover:scale-105'
                   />
+                  <div className='absolute inset-0 transition-all duration-300 bg-black/0 group-hover:bg-black/20' />
                 </div>
               </div>
             </div>
