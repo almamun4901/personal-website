@@ -3,6 +3,10 @@
   margin-top: 3em;
 }
 
+.about-selection{
+  @apply max-w-4xl mx-auto;
+}
+
 .about__name {
   color: var(--clr-primary);
 }

@@ -1,4 +1,4 @@
-import aboutpic from "./components/Access/myimage.jpg"
+import aboutpic from "./components/Access/smart.png"
 
 
 const header = {

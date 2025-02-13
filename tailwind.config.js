@@ -12,7 +12,7 @@ module.exports = {
         '3/4': '3 / 4'
       },
       animation: {
-        marquee: 'marquee 35s linear infinite',
+        marquee: 'marquee 30s linear infinite',
       },
       gridTemplateColumns: {
         '16': 'repeat(16, minmax(0, 1fr))'

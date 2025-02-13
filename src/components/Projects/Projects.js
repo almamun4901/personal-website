@@ -13,6 +13,30 @@ const Projects = () => {
       description: "Create experiences that immerse consumers...",
       tags: ["Journey Mapping", "Website Design", "Interaction Design"],
       image: `${process.env.PUBLIC_URL}/images/work/girl.jpeg`
+    },
+    {
+      title: "Web Development", 
+      description: "Create experiences that immerse consumers...",
+      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/eye.jpeg`
+    },
+    {
+      title: "Web Development", 
+      description: "Create experiences that immerse consumers...",
+      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/green.jpeg`
+    },
+    {
+      title: "Web Development", 
+      description: "Create experiences that immerse consumers...",
+      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/social.jpeg`
+    },
+    {
+      title: "Web Development", 
+      description: "Create experiences that immerse consumers...",
+      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/web.jpeg`
     }
   ]
 
