@@ -1,76 +1,70 @@
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import { about } from '../../portfolio'
-import './About.css'
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const About = () => {
-  const { photo, name, role, description, resume, social } = about
+// import { motion } from "framer-motion";
+
+// export default function About() {
+//   return (
+//     <div className="h-screen w-full bg-white text-black flex flex-col p-4 pt-20 pb-8 justify-between">
+//       {/* Centered main content */}
+//       <div className="flex flex-1 items-center justify-center overflow-hidden">
+//         <motion.h1 
+//           className="text-6xl font-bold text-center px-4"
+//           initial={{ scale: 0.5, opacity: 0 }}
+//           animate={{ scale: 1, opacity: 1 }}
+//           transition={{ duration: 1 }}
+//         >
+//           Billie Duvall
+//         </motion.h1>
+//       </div>
+
+//       {/* Bottom-aligned text, moved slightly higher */}
+//       <div className="flex-shrink-0 h-1/6 flex items-center justify-center mb-40">
+//         <p className="text-center text-lg w-full max-w-2xl px-4 mx-auto">
+//           DUTCH BORN, JAPANESE RAISED ART DIRECTOR BASED IN CAPE TOWN FOCUSING ON BRANDING & DESIGN IN EXPRESSIVE FORMS.
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
+
+export default function About() {
+  const name = "MD AL MAMUN".split(/(\s+)/).map((char) => ({ char, id: uuidv4() })); // Assign unique keys
 
   return (
-    <div className='flex flex-col md:flex-row items-center justify-between min-h-screen py-20 px-5 md:px-20'>
-      {/* Left Section - Text Content */}
-      <div className='md:w-1/2 md:pr-10 mb-10 md:mb-0'>
-        {name && (
-          <h1 className='text-5xl font-bold mb-4'>
-            Hi, This is <span className='text-purple-400'>{name}.</span>
-          </h1>
-        )}
-        
-        {role && <h2 className='text-3xl mb-6'>A {role}.</h2>}
-        
-        <p className='text-lg mb-8 leading-relaxed'>
-          {description && description}
-        </p>
-
-        <div className='flex space-x-4'>
-          {resume && (
-            <a href={resume} className='btn btn--outline rounded-full px-8 py-3'>
-              Resume
-            </a>
-          )}
-          {social && (
-            <>
-              {social.github && (
-                <a
-                  href={social.github}
-                  aria-label='github'
-                  className='p-2 hover:text-purple-600 transition-colors'
-                >
-                  <GitHubIcon style={{ fontSize: '2rem' }} />
-                </a>
-              )}
-              {social.linkedin && (
-                <a
-                  href={social.linkedin}
-                  aria-label='linkedin'
-                  className='p-2 hover:text-purple-600 transition-colors'
-                >
-                  <LinkedInIcon style={{ fontSize: '2rem' }} />
-                </a>
-              )}
-            </>
-          )}
-        </div>
+    <div className="h-screen w-full bg-white text-black flex flex-col p-4 pt-20 pb-8 justify-between">
+      {/* Centered main content */}
+      <div className="flex flex-1 items-center justify-center overflow-hidden">
+        <h1 className="text-8xl font-bold text-center px-4 flex">
+          {name.map(({ char, id }, index) => (
+            <motion.span
+              key={id} // Use a unique UUID instead of index
+              initial={{ color: "#A9A9A9", y: 30, opacity:0 }}
+              animate={{ color: "black", y: 0, opacity:1 }}
+              transition={{ duration: 1.5, delay: index * 0.25, ease: "easeInOut" }}
+              className={char === " " ? "px-2" : ""} // Adjusts space width
+            >
+              {char}
+            </motion.span>
+          ))}
+        </h1>
       </div>
 
-      {/* Right Section - Photo */}
-      {photo && (
-        <div className='md:w-1/2 flex justify-center md:justify-end group relative'>
-          <img 
-            className='rounded-lg shadow-2xl w-full max-w-md h-auto 
-                       transition-all duration-300 
-                       hover:scale-105 hover:shadow-3xl
-                       transform-gpu cursor-pointer'
-            alt={name || "Portrait"} 
-            src={photo} 
-          />
-          <div className='absolute inset-0 bg-gradient-to-r from-purple-500/20 to-transparent 
-                         opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                         rounded-lg pointer-events-none' />
-        </div>
-      )}
+      {/* Bottom-aligned text, sliding up animation */}
+      <motion.div 
+        className="flex-shrink-0 h-1/6 flex items-center justify-center mb-40"
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
+      >
+        <p className="text-center text-lg w-full max-w-2xl px-4 mx-auto">
+          I am Junior at Dartmouth College and majoring in Computer Science and Mathematics. I am interested in Full Stack Development and Financial Mathematics.
+        </p>
+      </motion.div>
     </div>
-  )
+  );
 }
 
-export default About

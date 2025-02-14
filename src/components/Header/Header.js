@@ -6,8 +6,8 @@ const Header = () => {
   const { homepage, title } = header
 
   return (
-    <header className='header center font-monument'>
-      <h3>
+    <header className='font-monument w-full flex justify-between items-center px-8 py-4'>
+      <h3 className='text-lg font-bold pl-4'>
         {homepage ? (
           <a href={homepage} className='link'>
             {title}
