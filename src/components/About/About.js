@@ -1,38 +1,8 @@
-// import GitHubIcon from '@mui/icons-material/GitHub';
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-// import { motion } from "framer-motion";
-
-// export default function About() {
-//   return (
-//     <div className="h-screen w-full bg-white text-black flex flex-col p-4 pt-20 pb-8 justify-between">
-//       {/* Centered main content */}
-//       <div className="flex flex-1 items-center justify-center overflow-hidden">
-//         <motion.h1 
-//           className="text-6xl font-bold text-center px-4"
-//           initial={{ scale: 0.5, opacity: 0 }}
-//           animate={{ scale: 1, opacity: 1 }}
-//           transition={{ duration: 1 }}
-//         >
-//           Billie Duvall
-//         </motion.h1>
-//       </div>
-
-//       {/* Bottom-aligned text, moved slightly higher */}
-//       <div className="flex-shrink-0 h-1/6 flex items-center justify-center mb-40">
-//         <p className="text-center text-lg w-full max-w-2xl px-4 mx-auto">
-//           DUTCH BORN, JAPANESE RAISED ART DIRECTOR BASED IN CAPE TOWN FOCUSING ON BRANDING & DESIGN IN EXPRESSIVE FORMS.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
 import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
 
 export default function About() {
-  const name = "MD AL MAMUN".split(/(\s+)/).map((char) => ({ char, id: uuidv4() })); // Assign unique keys
+  const name = "AL".split(/(\s+)/).map((char) => ({ char, id: uuidv4() })); // Assign unique keys
 
   return (
     <div className="h-screen w-full bg-white text-black flex flex-col p-4 pt-20 pb-8 justify-between">
@@ -61,7 +31,7 @@ export default function About() {
         transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
       >
         <p className="text-center text-lg w-full max-w-2xl px-4 mx-auto">
-          I am Junior at Dartmouth College and majoring in Computer Science and Mathematics. I am interested in Full Stack Development and Financial Mathematics.
+          I am a Junior at Dartmouth College and majoring in Computer Science and Mathematics. I am interested in Full Stack Development and Financial Mathematics.
         </p>
       </motion.div>
     </div>

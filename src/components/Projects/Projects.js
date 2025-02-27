@@ -3,39 +3,39 @@ import React from 'react'
 const Projects = () => {
   const professionalWork = [
     {
-      title: "Branding & Creative",
-      description: "Put the spotlight on your brand...",
-      tags: ["Brand Strategy", "Brand Identity", "Graphic Design"],
-      image: `${process.env.PUBLIC_URL}/images/work/boys.jpeg`
+      title: "Research at LISP",
+      description: "A Graph Neural Network (GNN)-based algorithm that integrates phonetics into large language models (LLMs) to improve low-resource language processing. By optimizing the model’s architecture for scalability, it enhances linguistic representation and computational efficiency, ensuring robust performance across diverse languages. The approach refines phonetic embeddings to strengthen language comprehension, enabling LLMs to handle complex linguistic structures with greater accuracy and adaptability.",
+      tags: ["Python", "LLM", "Graphic Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/machine_nb.png`
     },
     {
-      title: "Web Development", 
-      description: "Create experiences that immerse consumers...",
-      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      title: "Research at Keller Lab Group", 
+      description: "A research project decision support tools and data products within the solar industry to assist homeowners in decarbonization. By applying robust decision-making principles, it develops an XLRM framework to design an informational website portal, ensuring accessible and data-driven guidance for sustainable energy choices.",
+      tags: ["Python", "Numpy", "HTML", "React", "Interaction Design"],
       image: `${process.env.PUBLIC_URL}/images/work/girl.jpeg`
     },
     {
-      title: "Web Development", 
-      description: "Create experiences that immerse consumers...",
-      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
-      image: `${process.env.PUBLIC_URL}/images/work/eye.jpeg`
+      title: "Amazon Review Binary Classification Model", 
+      description: "This project focuses on developing and optimizing machine learning models, including TF-IDF, logistic regression, SVM, and decision trees, for binary classification of Amazon reviews, achieving an accuracy exceeding 94%. It incorporates large language models (Mistral-7B) with zero-, one-, and few-shot prompting to analyze the impact of prompt design and class definitions. Through detailed error analysis, the project evaluates model behavior under various conditions, refining natural language processing techniques and enhancing machine learning workflows through hands-on experimentation.",
+      tags: ["Python", "Scikit-learn", "Mistral-7B", "Logistic Regression"],
+      image: `${process.env.PUBLIC_URL}/images/work/machine.jpg`
     },
     {
-      title: "Web Development", 
-      description: "Create experiences that immerse consumers...",
-      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
-      image: `${process.env.PUBLIC_URL}/images/work/green.jpeg`
+      title: "AstroSphere XR", 
+      description: "An augmented and virtual reality (AR-VR) planet model using Unity C# and Maya to create an immersive and interactive solar system experience. The application enhances space education by providing an engaging, hands-on learning environment that allows users to explore celestial bodies and planetary dynamics in real time.",
+      tags: ["Unity C#", "Meta XR Toolkits"],
+      image: `${process.env.PUBLIC_URL}/images/work/realmadrid.jpg`
     },
     {
-      title: "Web Development", 
-      description: "Create experiences that immerse consumers...",
-      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
-      image: `${process.env.PUBLIC_URL}/images/work/social.jpeg`
+      title: "Tiny Search Engine", 
+      description: "A parallelized web crawler to efficiently store summaries of 10,000 interest pages and index them for retrieval within 20 milliseconds. A fuzzy querier was designed using a Hypertext Induced Topic Search (HITS) algorithm, incorporating a related page feature to enhance search relevance and user experience.",
+      tags: ["C", "Website Design", "Interaction Design"],
+      image: `${process.env.PUBLIC_URL}/images/work/minimalistic_nb.png`
     },
     {
-      title: "Web Development", 
-      description: "Create experiences that immerse consumers...",
-      tags: ["Journey Mapping", "Website Design", "Interaction Design"],
+      title: "Trigram Part of Speech (POS) Tagging Model", 
+      description: "A trained Hidden Markov Model on the Brown corpus, consisting of 1 million words from 500 samples, and utilized the Viterbi decoding algorithm to achieve 96% accuracy in part-of-speech tagging when tested on files exceeding 500,000 words. Additionally, a Huffman file compression algorithm was implemented to optimize data transfer and storage, enhancing the efficiency of model training and deployment.",
+      tags: ["Java"],
       image: `${process.env.PUBLIC_URL}/images/work/web.jpeg`
     }
   ]

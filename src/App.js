@@ -4,9 +4,9 @@ import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
-import Contact from './components/Contact/Contact'
+// import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-import Gallery from './components/Gallery/Gallery'
+// import Gallery from './components/Gallery/Gallery'
 import './App.css'
 
 function App() {
@@ -15,10 +15,11 @@ function App() {
       <Header />
       <main className="mx-auto max-w-[100vw]">
         <About />
-        <Projects />
         <Skills />
-        <Gallery />
-        <Contact />
+        <Projects />
+        
+        {/* <Gallery /> */}
+        {/* <Contact /> */}
       </main>
       <ScrollToTop />
       <Footer />
