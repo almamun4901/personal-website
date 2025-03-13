@@ -18,13 +18,13 @@ const Projects = () => {
       title: "Amazon Review Binary Classification Model", 
       description: "This project focuses on developing and optimizing machine learning models, including TF-IDF, logistic regression, SVM, and decision trees, for binary classification of Amazon reviews, achieving an accuracy exceeding 94%. It incorporates large language models (Mistral-7B) with zero-, one-, and few-shot prompting to analyze the impact of prompt design and class definitions. Through detailed error analysis, the project evaluates model behavior under various conditions, refining natural language processing techniques and enhancing machine learning workflows through hands-on experimentation.",
       tags: ["Python", "Scikit-learn", "Mistral-7B", "Logistic Regression"],
-      image: `${process.env.PUBLIC_URL}/images/work/machine.jpg`
+      image: `${process.env.PUBLIC_URL}/images/work/deepmind.jpg`
     },
     {
       title: "AstroSphere XR", 
       description: "An augmented and virtual reality (AR-VR) planet model using Unity C# and Maya to create an immersive and interactive solar system experience. The application enhances space education by providing an engaging, hands-on learning environment that allows users to explore celestial bodies and planetary dynamics in real time.",
       tags: ["Unity C#", "Meta XR Toolkits"],
-      image: `${process.env.PUBLIC_URL}/images/work/realmadrid.jpg`
+      image: `${process.env.PUBLIC_URL}/images/work/planets.jpg`
     },
     {
       title: "Tiny Search Engine", 

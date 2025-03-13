@@ -1,77 +1,37 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="bg-slate-300 text-black py-10 px-5 md:px-20">
-    <div className="flex flex-col md:flex-row justify-between">
+  <footer className="bg-slate-300 text-black py-8 md:py-10 px-4 sm:px-5 md:px-10 lg:px-20">
+    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-4">
       {/* Left Section */}
-      <div>
-        <p className="text-sm">&copy; 2025 Md Al Mamun</p>
+      <div className="order-1 md:order-none">
+        <p className="text-xs sm:text-sm">&copy; 2025 Md Al Mamun</p>
         <button 
           type="button" 
-          className="text-sm hover:underline focus:outline-none"
+          className="text-xs sm:text-sm hover:underline focus:outline-none mt-1"
         >
           Privacy Policy
         </button>
       </div>
       
       {/* Middle Section */}
-      <div className="text-left mt-5 md:mt-0">
-        <p className="text-sm font-medium mb-3">md.al.mamun.26@dartmouth.edu</p>
-        <div className="space-y-2">
-          <div className="flex items-center">
-            <span className="mr-2">→</span>
-            <button type="button" className="text-sm hover:underline">Instagram</button>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">→</span>
-            <button type="button" className="text-sm hover:underline">TikTok</button>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">→</span>
-            <button type="button" className="text-sm hover:underline">LinkedIn</button>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">→</span>
-            <button type="button" className="text-sm hover:underline">Behance</button>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">→</span>
-            <button type="button" className="text-sm hover:underline">Clutch</button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Right Section */}
-      <div className="text-right mt-5 md:mt-0">
-        <p className="text-sm font-medium">Join our newsletter to stay up to date</p>
-        <div className="mt-2 bg-white rounded-full p-2 border border-black w-fit">
-          <input
-            type="email"
-            placeholder="EMAIL ADDRESS"
-            className="px-4 py-2 rounded-l-full border border-black focus:outline-none"
-          />
-          <button 
-            type="button" 
-            className="bg-black text-white px-4 py-2 rounded-full hover:opacity-80 focus:outline-none"
-          >
-            Submit
-          </button>
-        </div>
-        <div className="flex items-center mt-2">
-          <label htmlFor="newsletter-agreement" className="text-sm flex items-center">
-            <input 
-              type="checkbox" 
-              id="newsletter-agreement"
-              className="mr-2" 
-            />
-            <span>I agree to receive marketing communications</span>
-          </label>
+      <div className="order-3 md:order-none text-left md:mt-0">
+        <p className="text-xs sm:text-sm md:text-base font-medium mb-2 sm:mb-3">md.al.mamun.26@dartmouth.edu</p>
+        <div className="space-y-1 sm:space-y-2">
+          {['Instagram', 'TikTok', 'LinkedIn', 'Behance', 'Clutch'].map((item) => (
+            <div key={item} className="flex items-center">
+              <span className="mr-2 text-sm">→</span>
+              <button type="button" className="text-xs sm:text-sm hover:underline">{item}</button>
+            </div>
+          ))}
         </div>
       </div>
     </div>
     
     {/* Large Text Footer Branding */}
-    <div className="text-[10rem] font-extrabold mt-10 text-center leading-none uppercase">Md Al Mamun.</div>
+    <div className="text-[4rem] sm:text-[4rem] md:text-[6rem] lg:text-[10rem] font-extrabold mt-6 md:mt-10 text-center leading-none uppercase">
+      Md Al Mamun.
+    </div>
   </footer>
 );
 

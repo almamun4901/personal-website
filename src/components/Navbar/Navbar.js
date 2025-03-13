@@ -1,14 +1,8 @@
-import { useContext, useState } from 'react'
-import Brightness2Icon from '@mui/icons-material/Brightness2';
-import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import { ThemeContext } from '../../contexts/theme'
+import { useState } from 'react'
 import { projects, skills, contact } from '../../portfolio'
 import './Navbar.css'
 
 const Navbar = () => {
-  const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList(!showNavList)
@@ -22,9 +16,11 @@ const Navbar = () => {
         {projects.length ? (
           <li className='nav__list-item'>
             <a
-              href='#projects'
-              onClick={toggleNavList}
+              href="https://drive.google.com/your-projects-link"
+              target="_blank"
+              rel="noopener noreferrer"
               className='link link--nav'
+              onClick={toggleNavList}
             >
               Projects
             </a>
@@ -34,9 +30,11 @@ const Navbar = () => {
         {skills.length ? (
           <li className='nav__list-item'>
             <a
-              href='#skills'
-              onClick={toggleNavList}
+              href="https://drive.google.com/your-skills-link"
+              target="_blank"
+              rel="noopener noreferrer"
               className='link link--nav'
+              onClick={toggleNavList}
             >
               Skills
             </a>
@@ -46,33 +44,29 @@ const Navbar = () => {
         {contact.email ? (
           <li className='nav__list-item'>
             <a
-              href='#contact'
-              onClick={toggleNavList}
+              href="https://drive.google.com/your-contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
               className='link link--nav'
+              onClick={toggleNavList}
             >
               Contact
             </a>
           </li>
         ) : null}
+
+        <li className='nav__list-item'>
+          <a
+            href="https://docs.google.com/document/d/1RM9cCEjsXV0zl42m8e8IK8ZaRM1A39ss/edit?usp=sharing&ouid=102828850000258196631&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='link link--nav'
+            onClick={toggleNavList}
+          >
+            Resume
+          </a>
+        </li>
       </ul>
-
-      <button
-        type='button'
-        onClick={toggleTheme}
-        className='btn btn--icon nav__theme'
-        aria-label='toggle theme'
-      >
-        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-      </button>
-
-      <button
-        type='button'
-        onClick={toggleNavList}
-        className='btn btn--icon nav__hamburger'
-        aria-label='toggle navigation'
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
-      </button>
     </nav>
   )
 }
