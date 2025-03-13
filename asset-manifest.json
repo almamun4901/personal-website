@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.77b8c274.css",
+    "main.js": "/personal-website/static/js/main.a4567b7b.js",
+    "static/media/smart.png": "/personal-website/static/media/smart.9dd54aeaf619010abc20.png",
+    "static/media/MonumentGrotesk-Italic.woff2": "/personal-website/static/media/MonumentGrotesk-Italic.d144178a3b3627a9bdff.woff2",
+    "static/media/MonumentGrotesk-Mono.woff2": "/personal-website/static/media/MonumentGrotesk-Mono.bbbf186b72047c643fae.woff2",
+    "index.html": "/personal-website/index.html",
+    "main.77b8c274.css.map": "/personal-website/static/css/main.77b8c274.css.map",
+    "main.a4567b7b.js.map": "/personal-website/static/js/main.a4567b7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77b8c274.css",
+    "static/js/main.a4567b7b.js"
+  ]
+}
